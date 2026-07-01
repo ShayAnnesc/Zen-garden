@@ -1,328 +1,516 @@
-@font-face { font-family: 'Geist'; src: url("fonts/Geist-Thin.otf") format('opentype'); font-weight: 100; font-style: normal; }
-@font-face { font-family: 'Geist'; src: url("fonts/Geist-ThinItalic.otf") format('opentype'); font-weight: 100; font-style: italic; }
-@font-face { font-family: 'Geist'; src: url("fonts/Geist-ExtraLight.otf") format('opentype'); font-weight: 200; font-style: normal; }
-@font-face { font-family: 'Geist'; src: url("fonts/Geist-Light.otf") format('opentype'); font-weight: 300; font-style: normal; }
-@font-face { font-family: 'Geist'; src: url("fonts/Geist-Regular.otf") format('opentype'); font-weight: 400; font-style: normal; }
-@font-face { font-family: 'Geist'; src: url("fonts/Geist-Medium.otf") format('opentype'); font-weight: 500; font-style: normal; }
-@font-face { font-family: 'Geist'; src: url("fonts/Geist-SemiBold.otf") format('opentype'); font-weight: 600; font-style: normal; }
-@font-face { font-family: 'Geist'; src: url("fonts/Geist-Bold.otf") format('opentype'); font-weight: 700; font-style: normal; }
-@font-face { font-family: 'Geist'; src: url("fonts/Geist-ExtraBold.otf") format('opentype'); font-weight: 800; font-style: normal; }
-@font-face { font-family: 'Geist'; src: url("fonts/Geist-Black.otf") format('opentype'); font-weight: 900; font-style: normal; }
+@font-face {
+    font-family: "Geist";
+    src: url("fonts/Geist-Thin.otf") format("opentype");
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Geist";
+    src: url("fonts/Geist-ThinItalic.otf") format("opentype");
+    font-weight: 100;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Geist";
+    src: url("fonts/Geist-ExtraLight.otf") format("opentype");
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Geist";
+    src: url("fonts/Geist-Light.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Geist";
+    src: url("fonts/Geist-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Geist";
+    src: url("fonts/Geist-Medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Geist";
+    src: url("fonts/Geist-SemiBold.otf") format("opentype");
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Geist";
+    src: url("fonts/Geist-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Geist";
+    src: url("fonts/Geist-ExtraBold.otf") format("opentype");
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Geist";
+    src: url("fonts/Geist-Black.otf") format("opentype");
+    font-weight: 900;
+    font-style: normal;
+}
 
-@font-face { font-family: 'GeistPixel Circle'; src: url("fonts/GeistPixel-Circle.otf") format('opentype'); }
-@font-face { font-family: 'GeistPixel Grid'; src: url("fonts/GeistPixel-Grid.otf") format('opentype'); }
-@font-face { font-family: 'GeistPixel Line'; src: url("fonts/GeistPixel-Line.otf") format('opentype'); }
-@font-face { font-family: 'GeistPixel Square'; src: url("fonts/GeistPixel-Square.otf") format('opentype'); }
-@font-face { font-family: 'GeistPixel Triangle'; src: url("fonts/GeistPixel-Triangle.otf") format('opentype'); }
+@font-face {
+    font-family: "GeistPixel Circle";
+    src: url("fonts/GeistPixel-Circle.otf") format("opentype");
+}
+@font-face {
+    font-family: "GeistPixel Grid";
+    src: url("fonts/GeistPixel-Grid.otf") format("opentype");
+}
+@font-face {
+    font-family: "GeistPixel Line";
+    src: url("fonts/GeistPixel-Line.otf") format("opentype");
+}
+@font-face {
+    font-family: "GeistPixel Square";
+    src: url("fonts/GeistPixel-Square.otf") format("opentype");
+}
+@font-face {
+    font-family: "GeistPixel Triangle";
+    src: url("fonts/GeistPixel-Triangle.otf") format("opentype");
+}
 
 /* ---------- palette & base ---------- */
 :root {
-	--black: #0b0808;
-	--black-soft: #171010;
-	--red: #cc1b1b;
-	--red-bright: #e42a20;
-	--red-deep: #7a0f0f;
-	--cream: #f4ece1;
-	--cream-dim: #cabcae;
+    --black: #0b0808;
+    --black-soft: #171010;
+    --red: #cc1b1b;
+    --red-bright: #e42a20;
+    --red-deep: #7a0f0f;
+    --cream: #f4ece1;
+    --cream-dim: #cabcae;
 }
 
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
 
-html { background: var(--black); }
+html {
+    background: var(--black);
+}
 
 body {
-	margin: 0;
-	background: var(--black);
-	color: var(--cream-dim);
-	font-family: 'Geist', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
-	font-size: 18px;
-	line-height: 1.65;
+    margin: 0;
+    background: var(--black);
+    color: var(--cream-dim);
+    font-family:
+        "Geist",
+        -apple-system,
+        "Segoe UI",
+        Helvetica,
+        Arial,
+        sans-serif;
+    font-size: 18px;
+    line-height: 1.65;
 }
 
-h1, h2, h3 {
-	font-family: 'Geist', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
-	font-weight: 700;
-	margin: 0;
-	color: var(--cream);
+h1,
+h2,
+h3 {
+    font-family:
+        "Geist",
+        -apple-system,
+        "Segoe UI",
+        Helvetica,
+        Arial,
+        sans-serif;
+    font-weight: 700;
+    margin: 0;
+    color: var(--cream);
 }
 
-p { margin: 0 0 1.2em; }
+p {
+    margin: 0 0 1.2em;
+}
 
 a {
-	color: var(--red-bright);
-	text-decoration: none;
-	border-bottom: 1px solid rgba(228, 42, 32, 0.4);
-	transition: color 0.2s ease, border-color 0.2s ease;
+    color: var(--red-bright);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(228, 42, 32, 0.4);
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
 }
 
-a:hover, a:focus {
-	color: var(--cream);
-	border-color: var(--cream);
+a:hover,
+a:focus {
+    color: var(--cream);
+    border-color: var(--cream);
 }
 
-abbr { border-bottom: 1px dotted currentColor; cursor: help; }
+abbr {
+    border-bottom: 1px dotted currentColor;
+    cursor: help;
+}
 
-::selection { background: var(--red-deep); color: var(--cream); }
+::selection {
+    background: var(--red-deep);
+    color: var(--cream);
+}
 
-.page-wrapper { max-width: 1500px; margin: 0 auto; }
+.page-wrapper {
+    max-width: 1500px;
+    margin: 0 auto;
+}
 
 /* ---------- intro / header ---------- */
 
 .intro {
-	background: var(--black);
-	text-align: center;
+    background: var(--black);
+    text-align: center;
 }
 
 /* fixed-height banner keeps the cathedral art from ballooning on wide screens */
 .intro::before {
-	content: "";
-	display: block;
-	width: 100%;
-	height: clamp(200px, 34vw, 460px);
-	background: url("images/catedral.png") center 20% / cover no-repeat;
-	box-shadow: inset 0 -80px 60px -40px var(--black);
+    content: "";
+    display: block;
+    width: 100%;
+    height: clamp(200px, 34vw, 460px);
+    background: url("images/catedral.png") center 20% / cover no-repeat;
+    box-shadow: inset 0 -80px 60px -40px var(--black);
 }
 
 .intro header {
-	padding: 0.6em 1.2em 0;
+    padding: 0.6em 1.2em 0;
 }
 
 /* cycles the 5 GeistPixel styles on the title; opacity dips between
    each swap so the font change reads as a blink rather than a jump-cut */
 @keyframes pixel-title-blink {
-	0%, 6% { font-family: 'GeistPixel Circle', 'Geist', sans-serif; opacity: 1; }
-	10% { opacity: 0.15; }
-	14%, 26% { font-family: 'GeistPixel Grid', 'Geist', sans-serif; opacity: 1; }
-	30% { opacity: 0.15; }
-	34%, 46% { font-family: 'GeistPixel Line', 'Geist', sans-serif; opacity: 1; }
-	50% { opacity: 0.15; }
-	54%, 66% { font-family: 'GeistPixel Square', 'Geist', sans-serif; opacity: 1; }
-	70% { opacity: 0.15; }
-	74%, 96% { font-family: 'GeistPixel Triangle', 'Geist', sans-serif; opacity: 1; }
-	100% { opacity: 0.15; }
+    0%,
+    6% {
+        font-family: "GeistPixel Circle", "Geist", sans-serif;
+        opacity: 1;
+    }
+    10% {
+        opacity: 0.15;
+    }
+    14%,
+    26% {
+        font-family: "GeistPixel Grid", "Geist", sans-serif;
+        opacity: 1;
+    }
+    30% {
+        opacity: 0.15;
+    }
+    34%,
+    46% {
+        font-family: "GeistPixel Line", "Geist", sans-serif;
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.15;
+    }
+    54%,
+    66% {
+        font-family: "GeistPixel Square", "Geist", sans-serif;
+        opacity: 1;
+    }
+    70% {
+        opacity: 0.15;
+    }
+    74%,
+    96% {
+        font-family: "GeistPixel Triangle", "Geist", sans-serif;
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.15;
+    }
 }
 
 .intro h1 {
-	font-weight: 900;
-	font-size: clamp(2.2em, 7vw, 3.4em);
-	letter-spacing: 0.14em;
-	text-transform: uppercase;
-	color: var(--cream);
-	transition: text-shadow 0.3s ease, letter-spacing 0.3s ease;
-	animation: pixel-title-blink 6s linear infinite;
+    font-weight: 900;
+    font-size: clamp(2.2em, 7vw, 3.4em);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--cream);
+    transition:
+        text-shadow 0.3s ease,
+        letter-spacing 0.3s ease;
+    animation: pixel-title-blink 6s linear infinite;
 }
 
 .intro h1:hover {
-	animation-play-state: paused;
-	letter-spacing: 0.2em;
-	text-shadow: 0 0 18px var(--red-bright);
+    animation-play-state: paused;
+    letter-spacing: 0.2em;
+    text-shadow: 0 0 18px var(--red-bright);
 }
 
 .intro h2 {
-	margin-top: 0.5em;
-	font-style: italic;
-	font-weight: 100;
-	font-size: 1.25em;
-	letter-spacing: 0.04em;
-	color: var(--red-bright);
+    margin-top: 0.5em;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 1.25em;
+    letter-spacing: 0.04em;
+    color: var(--red-bright);
 }
 
-.summary, .preamble {
-	max-width: 640px;
-	margin: 0 auto;
-	padding: 1.6em 1.4em 0.2em;
-	text-align: center;
+.summary,
+.preamble {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 1.6em 1.4em 0.2em;
+    text-align: center;
 }
 
-.summary p:first-child { color: var(--cream); font-size: 1.05em; }
+.summary p:first-child {
+    color: var(--cream);
+    font-size: 1.05em;
+}
 
 .preamble h3 {
-	font-size: 1.9em;
-	margin: 0.6em 0 0.5em;
-	position: relative;
-	display: inline-block;
+    font-size: 1.9em;
+    margin: 0.6em 0 0.5em;
+    position: relative;
+    display: inline-block;
 }
 
 .preamble h3::after {
-	content: "";
-	display: block;
-	width: 3.2em;
-	height: 2px;
-	margin: 0.35em auto 0;
-	background: var(--red);
+    content: "";
+    display: block;
+    width: 3.2em;
+    height: 2px;
+    margin: 0.35em auto 0;
+    background: var(--red);
 }
 
-.preamble p { text-align: left; }
+.preamble p {
+    text-align: left;
+}
 
 /* ---------- main / red section ---------- */
 
 .main.supporting {
-	background: var(--red-deep);
-	position: relative;
+    background: var(--red-deep);
+    position: relative;
 }
 
 /* fixed-height banner for the festival crowd art, bridging black -> red */
 .main.supporting::before {
-	content: "";
-	display: block;
-	width: 100%;
-	height: clamp(160px, 28vw, 380px);
-	background: url("images/Festa.png") center / cover no-repeat;
+    content: "";
+    display: block;
+    width: 100%;
+    height: clamp(160px, 28vw, 380px);
+    background: url("images/Festa.png") center / cover no-repeat;
 }
 
 .main.supporting > div:not(.participation):not(.benefits),
 .main.supporting > footer {
-	max-width: 680px;
-	margin: 0 auto;
-	padding: 2.2em 1.4em;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 2.2em 1.4em;
 }
 
 .main.supporting h3 {
-	font-size: 1.7em;
-	color: var(--cream);
-	text-transform: uppercase;
-	letter-spacing: 0.06em;
-	margin-bottom: 0.6em;
+    font-size: 1.7em;
+    color: var(--cream);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.6em;
 }
 
-.main.supporting p { color: var(--cream-dim); }
+.main.supporting p {
+    color: var(--cream-dim);
+}
 
-.main.supporting a { color: var(--cream); border-color: rgba(244, 236, 225, 0.5); }
-.main.supporting a:hover, .main.supporting a:focus { color: var(--black); border-color: var(--black); }
+.main.supporting a {
+    color: var(--cream);
+    border-color: rgba(244, 236, 225, 0.5);
+}
+.main.supporting a:hover,
+.main.supporting a:focus {
+    color: var(--black);
+    border-color: var(--black);
+}
 
-.explanation { background: var(--red); }
+.explanation {
+    background: var(--red);
+}
 
-.participation, .benefits {
-	background: var(--red-deep);
-	padding: 2.2em 1.4em;
+.participation,
+.benefits {
+    background: var(--red-deep);
+    padding: 2.2em 1.4em;
 }
 
 /* floats (not inline-block) avoid the whitespace-gap bug that would
    otherwise wrap .benefits onto its own line */
 @media (min-width: 640px) {
-	.participation, .benefits { float: left; width: 50%; }
-	.participation { text-align: right; padding-right: 2.4em; }
-	.benefits { text-align: left; padding-left: 2.4em; }
+    .participation,
+    .benefits {
+        float: left;
+        width: 50%;
+    }
+    .participation {
+        text-align: right;
+        padding-right: 2.4em;
+    }
+    .benefits {
+        text-align: left;
+        padding-left: 2.4em;
+    }
 }
 
-.requirements { background: var(--red); clear: both; }
+.requirements {
+    background: var(--red);
+    clear: both;
+}
 
 .requirements p[role="contentinfo"] {
-	margin-top: 2em;
-	padding-top: 1.4em;
-	border-top: 1px solid rgba(244, 236, 225, 0.25);
-	font-size: 0.9em;
-	color: var(--cream-dim);
+    margin-top: 2em;
+    padding-top: 1.4em;
+    border-top: 1px solid rgba(244, 236, 225, 0.25);
+    font-size: 0.9em;
+    color: var(--cream-dim);
 }
 
 footer {
-	text-align: center;
-	background: var(--red-deep);
-	display: flex;
-	justify-content: center;
-	gap: 1.6em;
-	flex-wrap: wrap;
+    text-align: center;
+    background: var(--red-deep);
+    display: flex;
+    justify-content: center;
+    gap: 1.6em;
+    flex-wrap: wrap;
 }
 
 footer a {
-	font-family: 'Geist', sans-serif;
-	font-weight: 600;
-	font-size: 0.8em;
-	letter-spacing: 0.12em;
-	text-transform: uppercase;
-	border-bottom: none;
-	color: var(--cream-dim);
+    font-family: "Geist", sans-serif;
+    font-weight: 600;
+    font-size: 0.8em;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-bottom: none;
+    color: var(--cream-dim);
 }
 
-footer a:hover { color: var(--red-bright); }
+footer a:hover {
+    color: var(--red-bright);
+}
 
 /* ---------- sidebar ---------- */
 
 .sidebar {
-	background: var(--black);
-	color: var(--cream-dim);
+    background: var(--black);
+    color: var(--cream-dim);
 }
 
-.sidebar .wrapper { max-width: 680px; margin: 0 auto; padding: 0 1.4em; }
+.sidebar .wrapper {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 1.4em;
+}
 
 .sidebar h3 {
-	font-size: 1.1em;
-	text-transform: uppercase;
-	letter-spacing: 0.12em;
-	color: var(--red-bright);
-	padding-top: 1.8em;
-	margin-bottom: 0.6em;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--red-bright);
+    padding-top: 1.8em;
+    margin-bottom: 0.6em;
 }
 
 .sidebar ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .design-selection li {
-	padding: 0.5em 0;
-	border-bottom: 1px solid var(--black-soft);
+    padding: 0.5em 0;
+    border-bottom: 1px solid var(--black-soft);
 }
 
 .design-selection .design-name {
-	font-family: 'Geist', sans-serif;
-	font-weight: 600;
-	font-size: 1.05em;
-	color: var(--cream);
-	border-bottom: none;
+    font-family: "Geist", sans-serif;
+    font-weight: 600;
+    font-size: 1.05em;
+    color: var(--cream);
+    border-bottom: none;
 }
 
 .design-selection .designer-name {
-	font-size: 0.85em;
-	color: var(--cream-dim);
+    font-size: 0.85em;
+    color: var(--cream-dim);
 }
 
 .design-archives nav ul {
-	display: flex;
-	flex-direction: column;
-	gap: 0.6em;
-	padding: 0.4em 0 1.6em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+    padding: 0.4em 0 1.6em;
 }
 
 .design-archives a {
-	display: block;
-	font-family: 'Geist', sans-serif;
-	font-weight: 600;
-	font-size: 1.15em;
-	color: var(--cream);
-	border: none;
-	padding: 0.5em 0;
+    display: block;
+    font-family: "Geist", sans-serif;
+    font-weight: 600;
+    font-size: 1.15em;
+    color: var(--cream);
+    border: none;
+    padding: 0.5em 0;
 }
 
-.design-archives li.next a { color: var(--red-bright); }
-.design-archives .indicator { margin-left: 0.2em; }
+.design-archives li.next a {
+    color: var(--red-bright);
+}
+.design-archives .indicator {
+    margin-left: 0.2em;
+}
 
-.zen-resources { padding-bottom: 2em; }
+.zen-resources {
+    padding-bottom: 2em;
+}
 
-.zen-resources li { padding: 0.3em 0; font-size: 0.9em; }
+.zen-resources li {
+    padding: 0.3em 0;
+    font-size: 0.9em;
+}
 
 /* ---------- decorative extras ---------- */
 
 .extra1 {
-	height: clamp(180px, 30vw, 380px);
-	background: var(--black) url("images/Leque.png") center bottom / contain no-repeat;
+    height: clamp(180px, 30vw, 380px);
+    background: var(--black) url("images/Leque.png") center bottom / contain
+        no-repeat;
 }
 
-.extra2, .extra3, .extra4, .extra5, .extra6 {
-	display: none;
+.extra2,
+.extra3,
+.extra4,
+.extra5,
+.extra6 {
+    display: none;
 }
 
 /* ---------- wide viewport: two-column layout ---------- */
 
 @media (min-width: 980px) {
-	.page-wrapper {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: flex-start;
-	}
+    .page-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
 
-	.intro { width: 100%; }
-	.main.supporting { flex: 3 1 0; min-width: 0; }
-	.sidebar { flex: 1.1 1 0; min-width: 320px; }
+    .intro {
+        width: 100%;
+    }
+    .main.supporting {
+        flex: 3 1 0;
+        min-width: 100%;
+    }
+    .sidebar {
+        flex: 1.1 1 0;
+        min-width: 320px;
+    }
 }
