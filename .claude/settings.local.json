@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -Command \"Get-Item 'C:\\\\Users\\\\shaya\\\\Downloads\\\\Zen garden\\\\images\\\\*.png' | Select-Object Name, Length\")",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(mkdir -p \"C:\\\\Users\\\\shaya\\\\Downloads\\\\Zen garden\\\\fonts\" && cp \"C:\\\\Users\\\\shaya\\\\Downloads\\\\geist-font-v1.7.2\\\\geist-font\\\\Geist\\\\otf\\\\\"*.otf \"C:\\\\Users\\\\shaya\\\\Downloads\\\\Zen garden\\\\fonts\\\\\" && ls \"C:\\\\Users\\\\shaya\\\\Downloads\\\\Zen garden\\\\fonts\")",
+      "Bash(mkdir -p \"C:\\\\Users\\\\shaya\\\\Downloads\\\\Zen garden\\\\fonts\" *)",
+      "Bash(cd \"/c/Users/shaya/Downloads/geist-font-v1.7.2/geist-font/Geist/otf\" && cp Geist-Black.otf Geist-Bold.otf Geist-ExtraBold.otf Geist-ExtraLight.otf Geist-Light.otf Geist-Medium.otf Geist-Regular.otf Geist-SemiBold.otf Geist-Thin.otf Geist-ThinItalic.otf \"/c/Users/shaya/Downloads/Zen garden/fonts/\" && ls \"/c/Users/shaya/Downloads/Zen garden/fonts\")",
+      "Read(//c/Users/shaya/Downloads/geist-font-v1.7.2/geist-font/GeistPixel/otf/**)",
+      "Bash(cp GeistPixel-Circle.otf GeistPixel-Grid.otf GeistPixel-Line.otf GeistPixel-Square.otf GeistPixel-Triangle.otf \"/c/Users/shaya/Downloads/Zen garden/fonts/\")"
+    ]
+  }
+}
